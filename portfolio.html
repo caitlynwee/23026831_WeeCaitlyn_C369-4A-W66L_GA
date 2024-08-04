@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <title>SKWC Lending portfolio Page</title>
+    <style>
+        h2,
+        h1 {
+            text-align: center;
+            margin: 10px;
+            color: rgb(159, 193, 255);
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 50px;
+            font-weight: bold;
+        }
+
+        label {
+            color: rgb(159, 193, 255);
+            font-size: 20px;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: bold;
+        }
+
+        #btn {
+            background-color: rgb(159, 193, 255);
+            border: none;
+            border-radius: 10px;
+            padding: 8px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        #btn:hover {
+            background-color: rgb(24, 28, 55);
+            color: white
+        }
+
+        body {
+            background-color: rgb(241, 253, 255);
+            text-align: center;
+        }
+
+        .container-fluid {
+            border: 1px;
+        }
+
+        p {
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        option {
+            font-family: 'Times New Roman', Times, serif;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm bg-light navbar-light">
+        <div class="container-fluid">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="/images/Screenshot 2024-07-25 110726.png" alt="logo" style="width:150px;">
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="services.html">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="resources.html">Resources</a>
+                </li>
+            </ul>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="login.html">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="signup.html">Sign Up</a>
+                </li>
+            </ul>
+        </div>
+        <div class="nav-item">
+            <a class="navbar-brand" href="account.html">
+                <img src="/images/profile.png" alt="logo" style="width:50px;">
+            </a>
+        </div>
+    </nav>
+    <div class="container">
+        <h1>Portfolio Management</h1>
+        <div class="container mt-5">
+            <div class="d-flex justify-content-center">
+                <div class="card w-50">
+                    <div class="card-header text-center">
+                        <div class="profile-info">
+                            <h2>Investor Profile</h2>
+                            <p><strong>Name:</strong> Caitlyn Wee</p>
+                            <p><strong>Email:</strong> cailtynwee68@example.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container mt-5">
+                <div class="d-flex justify-content-center">
+                    <div class="card w-50">
+                        <div class="card-header text-center">
+                            <div class="portfolio-summary">
+                                <h2>Portfolio Summary</h2>
+                                <p><strong>Total Investment:</strong> $50,000</p>
+                                <p><strong>Total Earnings:</strong> $5,000</p>
+                                <p><strong>Active Investments:</strong> 10</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container mt-5">
+                    <div class="d-flex justify-content-center">
+                        <div class="card w-50">
+                            <div class="card-header text-center">
+                <div class="investment-list">
+                    <h2>Investments</h2>
+                    <div class="investment-item">
+                        <p><strong>Loan ID:</strong> 12345</p>
+                        <p><strong>Amount:</strong> $5,000</p>
+                        <p><strong>Return Rate:</strong> 8%</p>
+                        <p><strong>Status:</strong> Active</p>
+                    </div>
+                    <div class="investment-item">
+                        <p><strong>Loan ID:</strong> 67890</p>
+                        <p><strong>Amount:</strong> $10,000</p>
+                        <p><strong>Return Rate:</strong> 7%</p>
+                        <p><strong>Status:</strong> Active</p>
+                    </div>
+                </div>
+
+                <div class="new-investment">
+                    <h2>Add New Investment</h2>
+                    <form>
+                        <div>
+                            <label for="loan-id">Loan ID:</label>
+                            <input type="text" id="loan-id" name="loan_id" class="investment-input" required>
+                        </div>
+                        <div>
+                            <label for="investment-amount">Investment Amount:</label>
+                            <input type="number" id="investment-amount" name="investment_amount"
+                                class="investment-input" required>
+                        </div>
+                        <div>
+                            <button type="submit" class="investment-btn" id="btn">Add Investment</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+</body>
+
+</html>
