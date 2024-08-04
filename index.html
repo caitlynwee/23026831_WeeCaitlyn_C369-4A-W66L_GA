@@ -18,20 +18,25 @@
             font-size: 100px;
             font-weight:bold;
         }
-        #start {
-            color: rgb(196, 204, 255);
-            text-decoration: none;
-            font-size: 30px;
-            background-color: rgb(5, 7, 60);
-        }
-        #start:hover {
-            color: rgb(166, 137, 214);
-            text-decoration: underline;
-        }
         body {
             background-color: rgb(241, 253, 255);
             background-image: url(/images/first.png);
         }
+
+        #start {
+            text-decoration: none;
+            font-size: 20px;
+            background-color: rgb(27, 103, 244);
+            color: rgb(229, 221, 245);
+            padding: 10px 20px;
+            border-radius: 15px;
+        }
+
+        #start:hover {
+            background-color: rgb(204, 172, 255);
+            color:black;
+        }
+        
     </style>
 </head>
 
@@ -68,16 +73,17 @@
                 </li>
             </ul>
         </div>
-        <div class="nav-item">
-            <a class="navbar-brand" href="account.html">
-              <img src="/images/profile.png" alt="logo" style="width:50px;">
-          </a>
-          </div>
     </nav>
 <div class="container-fluid1">
     <img src="/images/Screenshot 2024-07-25 110726.png">
     <br>
-    <a id="start" href="services.html">Start Lending with us today!</a>
+    <br>
+    <button type="submit" id="start">Start Lending with us today!</button>
 </div>
+<script>
+    document.getElementById("start").onclick = function () {
+        location.href = "signup.html";
+    };
+</script>
 </body>
 </html>
