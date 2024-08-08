@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,113 +8,151 @@
     <title>Sign Up</title>
     <style>
         h3 {
-        text-align: center;
-        margin: 10px;
-        color: rgb(159, 193, 255);
-        font-family: 'Times New Roman', Times, serif;
-        font-size: 50px;
-        font-weight: bold;
-    }
+            text-align: center;
+            margin: 10px;
+            color: rgb(159, 193, 255);
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 2.5rem; 
+            font-weight: bold;
+        }
 
-    label {
-        color: rgb(159, 193, 255);
-        font-size: 20px;
-        font-family: 'Times New Roman', Times, serif;
-        font-weight: bold;
-      }
+        label {
+            color: rgb(159, 193, 255);
+            font-size: 1.125rem; 
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: bold;
+        }
+
         .btn {
             background-color: rgb(159, 193, 255);
             border: none;
         }
-        .btn:hover{
-        background-color: rgb(24, 28, 55);
-      }
 
-      body {
-        background-color: rgb(241, 253, 255);
-      }
+        .btn:hover {
+            background-color: rgb(24, 28, 55);
+        }
+
+        body {
+            background-color: rgb(241, 253, 255);
+        }
+
+        .navbar-nav .nav-item {
+            margin-left: 10px;
+        }
+
+        .card {
+            border-radius: 10px;
+        }
+
+        @media (max-width: 576px) {
+            .card {
+                width: 90%;
+            }
+
+            h3 {
+                font-size: 2rem; 
+            }
+        }
     </style>
 </head>
+
 <body>
     <nav class="navbar navbar-expand-sm bg-light navbar-light">
         <div class="container-fluid">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="navbar-brand" href="index.html">
-                        <img src="images/Screenshot 2024-07-25 110726.png" alt="logo" style="width:150px;">
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="about.html">About Us</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="services.html">Services</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="contact.html">Contact Us</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="resources.html">Resources</a>
-                </li>
-            </ul>
-        </div>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="login.html">Login</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="signup.html">Sign Up</a>
-                </li>
-            </ul>
+            <a class="navbar-brand" href="index.html">
+                <img src="images/Screenshot 2024-07-25 110726.png" alt="logo" style="width:150px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="resources.html">Resources</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="signup.html">Sign Up</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
+
     <div class="container mt-5">
-      <div class="d-flex justify-content-center">
-        <div class="card w-50">
-          <div class="card-header text-center">
-            <h3>Sign Up as Investor!</h3>
-          </div>
-          <div class="card-body">
-            <form id="signupForm">
-              <div class="form-group">
-                <label for="name">Full Name</label>
-                <input type="text" class="form-control" id="name" placeholder="Enter your full name" required>
-              </div>
-              <div class="form-group">
-                <label for="email">Email address</label>
-                <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
-              </div>
-              <div class="form-group">
-                <label for="password">Password</label>
-                <input type="password" class="form-control" id="password" placeholder="Enter your password" required>
-              </div>
-              <div class="form-group">
-                <label for="confirmPassword">Confirm Password</label>
-                <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm your password" required>
-              </div>
-              <button type="submit" class="btn btn-primary btn-block">Sign Up</button>
-            </form>
-          </div>
+        <div class="d-flex justify-content-center">
+            <div class="card w-100 w-md-75 w-lg-50">
+                <div class="card-header text-center">
+                    <h3>Sign Up as Investor!</h3>
+                </div>
+                <div class="card-body">
+                    <form id="signupForm">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Enter your full name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email address</label>
+                            <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" class="form-control" id="password" placeholder="Enter your password" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="confirmPassword">Confirm Password</label>
+                            <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm your password" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Sign Up</button>
+                    </form>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
+
     <script>
-        document.getElementById('signupForm').addEventListener('submit', function(e) {
-          e.preventDefault(); // Prevent the default form submission
-    
-          // Example validation and registration logic
-          const email = document.getElementById('email').value;
-          const password = document.getElementById('password').value;
-    
-          // Example success condition (replace with actual registration logic)
-          if (email && password) {
-            // Redirect to the login page
-            window.location.href = 'logininvestors.html';
-          } else {
-            alert('Please fill out all fields correctly.');
-          }
+      function validatePassword() {
+            var password = document.getElementById("password").value;
+            var confirmPassword = document.getElementById("confirmPassword").value;
+
+            if (password !== confirmPassword) {
+                alert("Passwords do not match!");
+                return false;
+            }
+            return true;
+        }
+        document.getElementById('signupForm').addEventListener('submit', function (e) {
+            e.preventDefault(); // Prevent the default form submission
+
+            // Example validation and registration logic
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            // Example success condition (replace with actual registration logic)
+            if (email && password && validatePassword()) {
+                // Redirect to the login page
+                window.location.href = 'logininvestors.html';
+            } else {
+                alert('Please fill out all fields correctly.');
+            }
         });
-      </script>
-      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

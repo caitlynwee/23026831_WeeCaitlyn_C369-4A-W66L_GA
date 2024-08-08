@@ -7,177 +7,209 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <title>SKWC Lending Loan Calculator Page</title>
     <style>
-    body {
-        font-family: 'Times New Roman', Times, serif;
-        margin: 0;
-        padding: 0;
-        text-align: center;
-        background-color: rgb(241, 253, 255);
-    }
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: rgb(241, 253, 255);
+        }
 
-    .content {
-        margin-top: 50px;
-    }
-    .header h1 {
-        margin: 0;
-    }
+        .header {
+            background-color: #f8f9fa;
+            padding: 10px 0;
+        }
 
-    .header nav a {
-        margin: 0 15px;
-        color: white;
-        text-decoration: none;
-    }
+        .header img {
+            width: 150px;
+        }
 
-    .header nav a:hover {
-        text-decoration: underline;
-    }
+        .navbar-nav {
+            margin: 0;
+        }
 
-    .content {
-        padding: 20px;
-    }
+        .navbar-nav a {
+            margin: 0 15px;
+            color: rgb(24, 28, 55);
+            text-decoration: none;
+        }
 
-    .calculator-form {
-        max-width: 600px;
-        margin: 0 auto;
-        padding: 20px;
-        border: 1px solid #ccc;
-        background-color: #f9f9f9;
-        border-radius: 8px;
-    }
+        .navbar-nav a:hover {
+            text-decoration: underline;
+        }
 
-    .calculator-form h2 {
-        color: rgb(159, 193, 255);
-    }
+        .content {
+            padding: 20px;
+        }
 
-    .calculator-form label {
-        display: block;
-        margin-bottom: 8px;
-        font-weight: bold;
-    }
+        .calculator-form {
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+        }
 
-    .calculator-form input {
-        width: 100%;
-        padding: 10px;
-        margin-bottom: 20px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        box-sizing: border-box;
-    }
+        .calculator-form h2 {
+            color: rgb(159, 193, 255);
+        }
 
-    .calculator-form button {
-        background-color: rgb(159, 193, 255);
-        color: white;
-        border: none;
-        padding: 10px 20px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
-        cursor: pointer;
-        border-radius: 10px;
-    }
+        .calculator-form label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
 
-    .calculator-form button:hover {
-        background-color: rgb(24, 28, 55);
-    }
+        .calculator-form input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
 
-    .result {
-        margin-top: 20px;
-        font-size: 20px;
-        color: rgb(24, 28, 55);
-    }
+        .calculator-form button {
+            background-color: rgb(159, 193, 255);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 10px;
+        }
 
-</style>
+        .calculator-form button:hover {
+            background-color: rgb(24, 28, 55);
+        }
+
+        .result {
+            margin-top: 20px;
+            font-size: 20px;
+            color: rgb(24, 28, 55);
+        }
+
+        @media (max-width: 768px) {
+            .navbar-nav {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .navbar-nav a {
+                margin: 10px 0;
+            }
+
+            .calculator-form {
+                padding: 15px;
+                border-radius: 5px;
+            }
+
+            .calculator-form button {
+                font-size: 14px;
+                padding: 8px 16px;
+            }
+
+            .result {
+                font-size: 18px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-sm bg-light navbar-light">
+    <nav class="navbar navbar-expand-lg bg-light navbar-light header">
         <div class="container-fluid">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="navbar-brand" href="index.html">
-                        <img src="images/Screenshot 2024-07-25 110726.png" alt="logo" style="width:150px;">
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="about.html">About Us</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="services.html">Services</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="contact.html">Contact Us</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="resources.html">Resources</a>
-                </li>
-            </ul>
-        </div>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="login.html">Login</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="signup.html">Sign Up</a>
-                </li>
-            </ul>
-        </div>
-        <div class="nav-item">
-            <a class="navbar-brand" href="account.html">
-                <img src="images/profile.png" alt="logo" style="width:50px;">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/Screenshot 2024-07-25 110726.png" alt="logo">
             </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="resources.html">Resources</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="signup.html">Sign Up</a>
+                    </li>
+                </ul>
+                <div class="nav-item">
+                    <a class="navbar-brand" href="account.html">
+                        <img src="images/profile.png" alt="profile" style="width:50px;">
+                    </a>
+                </div>
+            </div>
         </div>
     </nav>
-<div class="content">
-    <div class="calculator-form">
-        <h2>Calculate Your Loan Payments</h2>
-        <form id="loanForm">
-            <label for="loanAmount">Loan Amount:</label>
-            <input type="number" id="loanAmount" name="loanAmount" required>
+    <div class="content">
+        <div class="calculator-form">
+            <h2>Calculate Your Loan Payments</h2>
+            <form id="loanForm">
+                <label for="loanAmount">Loan Amount:</label>
+                <input type="number" id="loanAmount" name="loanAmount" required>
 
-            <label for="interestRate">Annual Interest Rate (%):</label>
-            <input type="number" id="interestRate" name="interestRate" step="0.01" required>
+                <label for="interestRate">Annual Interest Rate (%):</label>
+                <input type="number" id="interestRate" name="interestRate" step="0.01" required>
 
-            <label for="loanTerm">Loan Term (years):</label>
-            <input type="number" id="loanTerm" name="loanTerm" required>
+                <label for="loanTerm">Loan Term (years):</label>
+                <input type="number" id="loanTerm" name="loanTerm" required>
 
-            <button type="button" onclick="calculateLoan()">Calculate</button>
-        </form>
-        <div id="result" class="result"></div>
+                <button type="button" onclick="calculateLoan()">Calculate</button>
+            </form>
+            <div id="result" class="result"></div>
+        </div>
     </div>
-</div>
-<script>
-    function calculateLoan() {
-        const loanAmount = document.getElementById('loanAmount').value;
-        const interestRate = document.getElementById('interestRate').value;
-        const loanTerm = document.getElementById('loanTerm').value;
+    <script>
+        function calculateLoan() {
+            const loanAmount = document.getElementById('loanAmount').value;
+            const interestRate = document.getElementById('interestRate').value;
+            const loanTerm = document.getElementById('loanTerm').value;
 
-        if (loanAmount === '' || interestRate === '' || loanTerm === '') {
-            alert('Please fill in all fields');
-            return;
+            if (loanAmount === '' || interestRate === '' || loanTerm === '') {
+                alert('Please fill in all fields');
+                return;
+            }
+
+            const principal = parseFloat(loanAmount);
+            const calculateInterest = parseFloat(interestRate) / 100 / 12;
+            const calculatePayments = parseFloat(loanTerm) * 12;
+
+            // Compute the monthly payment
+            const x = Math.pow(1 + calculateInterest, calculatePayments);
+            const monthlyPayment = (principal * x * calculateInterest) / (x - 1);
+
+            if (!isFinite(monthlyPayment)) {
+                alert('Please check your numbers');
+                return;
+            }
+
+            const result = document.getElementById('result');
+            result.innerHTML = `
+                <h3>Results</h3>
+                <p>Monthly Payment: $${monthlyPayment.toFixed(2)}</p>
+                <p>Total Payment: $${(monthlyPayment * calculatePayments).toFixed(2)}</p>
+                <p>Total Interest: $${((monthlyPayment * calculatePayments) - principal).toFixed(2)}</p>
+            `;
         }
-
-        const principal = parseFloat(loanAmount);
-        const calculateInterest = parseFloat(interestRate) / 100 / 12;
-        const calculatePayments = parseFloat(loanTerm) * 12;
-
-        // Compute the monthly payment
-        const x = Math.pow(1 + calculateInterest, calculatePayments);
-        const monthlyPayment = (principal * x * calculateInterest) / (x - 1);
-
-        if (!isFinite(monthlyPayment)) {
-            alert('Please check your numbers');
-            return;
-        }
-
-        const result = document.getElementById('result');
-        result.innerHTML = `
-            <h3>Results</h3>
-            <p>Monthly Payment: $${monthlyPayment.toFixed(2)}</p>
-            <p>Total Payment: $${(monthlyPayment * calculatePayments).toFixed(2)}</p>
-            <p>Total Interest: $${((monthlyPayment * calculatePayments) - principal).toFixed(2)}</p>
-        `;
-    }
-</script>
+    </script>
 </body>
 </html>

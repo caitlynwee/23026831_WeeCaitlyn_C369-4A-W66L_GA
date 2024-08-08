@@ -211,23 +211,26 @@
                 </div>
             </div>
 
-            <!-- Add more loan offers as needed -->
         </div>
     </div>
 
     <script>
-        // Example data (replace with actual data fetching from server)
         const loanOffers = [
             { id: 1, amount: 10000, rate: 5, term: 24 },
             { id: 2, amount: 5000, rate: 3, term: 12 },
             { id: 3, amount: 15000, rate: 4, term: 36 },
-            // Add more loan offers as needed
+            { id: 4, amount: 20000, rate: 6, term: 48 },
+            { id: 5, amount: 25000, rate: 7, term: 60 },
+            { id: 6, amount: 30000, rate: 8, term: 72 },
+            { id: 7, amount: 35000, rate: 9, term: 84 },
+            { id: 8, amount: 40000, rate: 10, term: 96 },
+            { id: 9, amount: 45000, rate: 11, term: 108 },
+            { id: 10, amount: 50000, rate: 12, term: 120 }
         ];
 
-        // Function to display loan offers
         function displayLoanOffers() {
             const loanOffersContainer = document.getElementById('loanOffers');
-            loanOffersContainer.innerHTML = ''; // Clear existing offers
+            loanOffersContainer.innerHTML = '';
             loanOffers.forEach(offer => {
                 const offerElement = document.createElement('div');
                 offerElement.className = 'card loan-card';
@@ -246,7 +249,6 @@
             });
         }
 
-        // Function to filter loan offers based on user input
         function filterLoanOffers() {
             const loanAmount = parseFloat(document.getElementById('loanAmount').value) || 0;
             const interestRate = parseFloat(document.getElementById('interestRate').value) || 100;
@@ -261,10 +263,9 @@
             displayFilteredOffers(filteredOffers);
         }
 
-        // Function to display filtered loan offers
         function displayFilteredOffers(offers) {
             const loanOffersContainer = document.getElementById('loanOffers');
-            loanOffersContainer.innerHTML = ''; // Clear existing offers
+            loanOffersContainer.innerHTML = '';
             offers.forEach(offer => {
                 const offerElement = document.createElement('div');
                 offerElement.className = 'card loan-card';
@@ -281,17 +282,15 @@
             });
         }
 
-        // Function to simulate applying for a loan
         function applyForLoan(loanId) {
             alert(`You have applied for Loan Offer ${loanId}`);
         }
 
-        // Event listeners for filters
         document.getElementById('loanAmount').addEventListener('input', filterLoanOffers);
         document.getElementById('interestRate').addEventListener('input', filterLoanOffers);
         document.getElementById('loanTerm').addEventListener('input', filterLoanOffers);
 
-        // Initial display of loan offers
+
         displayLoanOffers();
     </script>
 
