@@ -103,20 +103,28 @@
     </div>
     <script>
         document.getElementById('signupForm').addEventListener('submit', function(e) {
-          e.preventDefault(); // Prevent the default form submission
+          e.preventDefault(); 
     
-          // Example validation and registration logic
           const email = document.getElementById('email').value;
           const password = document.getElementById('password').value;
     
-          // Example success condition (replace with actual registration logic)
           if (email && password) {
-            // Redirect to the login page
             window.location.href = 'login.html';
           } else {
             alert('Please fill out all fields correctly.');
           }
         });
+
+        function validatePassword() {
+            var password = document.getElementById("password").value;
+            var confirmPassword = document.getElementById("confirmPassword").value;
+
+            if (password !== confirmPassword) {
+                alert("Passwords do not match!");
+                return false;
+            }
+            return true;
+        }
       </script>
       <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
