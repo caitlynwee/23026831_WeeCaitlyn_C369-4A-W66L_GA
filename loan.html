@@ -98,7 +98,7 @@
           <h3>Apply for a Loan</h3>
         </div>
         <div class="card-body">
-          <form action="submitloansuccess.html" method="POST">
+          <form id="loan">
             <div class="form-group">
               <label for="name">Full Name</label>
               <input type="text" class="form-control" id="name" placeholder="Enter your full name" required>
@@ -136,12 +136,19 @@
               </select>
             </div>
             <br>
-            <button type="submit" class="btn btn-primary btn-block">Submit Application</button>
+            <button type="submit" class="btn btn-primary btn-block" id="submit">Submit Application</button>
           </form>
         </div>
       </div>
     </div>
   </div>
+  <script>
+    document.getElementById('loan').addEventListener('submit', function (event) {
+                event.preventDefault();
+                alert('Loan application submitted successfully. Please wait for approval. Confirmation will be sent through email.');
+                window.location.href = '/index.html';
+            });
+  </script>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
